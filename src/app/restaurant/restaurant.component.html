@@ -1,0 +1,33 @@
+<div class="col-md-8">
+  <h2> Restaurant Details</h2>
+  
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <!-- <th class="hidden">Id</th> -->
+      <th>Id</th>
+      <th>Restaurant Name</th>
+      <th>Location</th>
+      <th>cuisines</th>
+      <th>Image Url</th>
+      <th>Reviews</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let restaurant of restaurants">
+      <!-- <td class="hidden"></td> -->
+      <td>{{ restaurant.id}}</td>
+      <td>{{ restaurant.name}}</td>
+      <td>{{ restaurant.location}}</td>
+      <td>{{ restaurant.cuisines}}</td>
+      <td>{{ restaurant.image}}</td>
+      <td>{{ restaurant.review}}</td>
+      <td><button class="btn btn-danger" (click)="deleteRestaurants(restaurant)"> Delete </button></td>
+      <!-- <td><button class="btn btn-success" (click)="updateRestaurants(restaurant)"> Update </button></td> -->
+      <td><button class ="btn btn-warning" routerLink="/update/id">Update</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  
